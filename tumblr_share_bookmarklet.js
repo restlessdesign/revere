@@ -13,8 +13,11 @@
         share_height = 430;
 
     try {
-        if (!/^(.*\.)?tumblr[^.]*$/.test(location.host)) throw (0);
-        /* Internal Tumblr that verifies successful bookmarklet installation */
+        if (!/^(.*\.)?tumblr[^.]*$/.test(location.host)) {
+            throw (0);
+        }
+
+        // Global function on Tumblr which verifies successful installation
         tstbklt();
     }
     catch (err) {
