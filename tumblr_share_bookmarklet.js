@@ -1,4 +1,4 @@
-javascript:
+/*global tstbklt*/
 (function tumblrShareBookmarklet(doc, win, undefined) {
     var getWindowSelection = win.getSelection,
         getDocumentSelection = doc.getSelection,
@@ -36,4 +36,3 @@ javascript:
         }
     }
 })(document, window);
-void(0)​;
