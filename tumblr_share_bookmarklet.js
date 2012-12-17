@@ -22,7 +22,14 @@
     }
     catch (err) {
         function centerShareWindow() {
+            var location = {
+                    x: 0,
+                    y: 0
+                },
+                top,
+                left;
 
+            return location;
         }
 
         function openShareWindow() {
