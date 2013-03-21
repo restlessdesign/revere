@@ -37,8 +37,8 @@ catch (err) {
             y: 0
         };
 
-        coordinates.x = win.screenLeft;
-        coordinates.y = win.screenTop;
+        coordinates.x = win.screenLeft || win.screenX;
+        coordinates.y = win.screenTop || win.screenY;
 
         if (do_center) {
             coordinates.x += ((bod.clientWidth / 2) - (share_width / 2));
