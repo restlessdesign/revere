@@ -2,6 +2,7 @@
 
 var win = window,
     doc = document,
+    bod = doc.body,
     getWindowSelection = win.getSelection,
     getDocumentSelection = doc.getSelection,
     document_selection = doc.selection,
@@ -40,8 +41,8 @@ catch (err) {
         coordinates.y = win.screenTop;
 
         if (do_center) {
-            coordinates.x += ((doc.clientWidth / 2) - (share_width / 2));
-            coordinates.y += ((doc.clientHeight / 2) - (share_height / 2));
+            coordinates.x += ((bod.clientWidth / 2) - (share_width / 2));
+            coordinates.y += ((bod.clientHeight / 2) - (share_height / 2));
         }
         else {
             coordinates.x += 10;
