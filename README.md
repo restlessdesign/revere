@@ -1,6 +1,6 @@
 # Revere
 
-An improved Tumblr share bookmarklet which positions the share pop-up based on the location of your browser window, centering it by default.
+An improved Tumblr share bookmarklet which positions the pop-up based on the position of your browser window, centering it by default.
 
 ## Installation
 
