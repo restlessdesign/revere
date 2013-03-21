@@ -65,3 +65,5 @@ catch (err) {
         openShareWindow();
     }
 }
+
+void(0);
