@@ -31,11 +31,10 @@ catch (err) {
      * @return {Object} The x and y coordinates to be used for the pop-up.
      */
     function calculatePosition(do_center) {
-        var corner_padding = 10,
-            coordinates = {
-                x: 0,
-                y: 0
-            };
+        var coordinates = {
+            x: 0,
+            y: 0
+        };
 
         coordinates.x = window.screenLeft;
         coordinates.y = window.screenTop;
@@ -45,8 +44,8 @@ catch (err) {
             coordinates.y += ((document.clientHeight / 2) - (share_height / 2));
         }
         else {
-            coordinates.x += corner_padding;
-            coordinates.y += corner_padding;
+            coordinates.x += 10;
+            coordinates.y += 110; // tweak this depending on the heights of your browser toolbar(s)
         }
 
         return coordinates;
