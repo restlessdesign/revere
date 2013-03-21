@@ -42,7 +42,7 @@ catch (err) {
 
         if (do_center) {
             coordinates.x += ((bod.clientWidth / 2) - (share_width / 2));
-            coordinates.y += ((bod.clientHeight / 2) - (share_height / 2));
+            coordinates.y += ((win.innerHeight / 2) - (share_height / 2));
         }
         else {
             coordinates.x += 10;
