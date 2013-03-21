@@ -36,12 +36,12 @@ catch (err) {
             y: 0
         };
 
-        coordinates.x = window.screenLeft;
-        coordinates.y = window.screenTop;
+        coordinates.x = win.screenLeft;
+        coordinates.y = win.screenTop;
 
         if (do_center) {
-            coordinates.x += ((document.clientWidth / 2) - (share_width / 2));
-            coordinates.y += ((document.clientHeight / 2) - (share_height / 2));
+            coordinates.x += ((doc.clientWidth / 2) - (share_width / 2));
+            coordinates.y += ((doc.clientHeight / 2) - (share_height / 2));
         }
         else {
             coordinates.x += 10;
