@@ -21,19 +21,38 @@
         tstbklt();
     }
     catch (err) {
-        function centerShareWindow() {
-            var location = {
+        /**
+         * @param {boolean} do_center If "true", the share window will appear
+         *     centered in the browser window. Otherwise, it will appear in
+         *     the top-left corner of the browser.
+         *
+         * @return {Object} The x and y coordinates to be used for the pop-up.
+         */
+        function calculatePosition(do_center) {
+            var corner_padding = 10,
+                coordinates = {
                     x: 0,
                     y: 0
-                },
-                top,
-                left;
+                };
 
-            return location;
+            coordinates.x = window.screenLeft;
+            coordinates.y = window.screenTop;
+
+            if (do_center) {
+                coordinates.x += ((document.clientWidth / 2) - (share_width / 2));
+                coordinates.y += ((document.clientHeight / 2) - (share_height / 2));
+            }
+            else {
+                coordinates.x += corner_padding;
+                coordinates.y += corner_padding;
+            }
+
+            return coordinates;
         }
 
         function openShareWindow() {
-            if (!win.open(url, 't', 'toolbar=0,resizable=0,status=1,width=' + share_width + ',height=' + share_height)) {
+            var position = calculatePosition(true);
+            if (!win.open(url, 't', 'toolbar=0,resizable=0,status=1,width=' + share_width + ',height=' + share_height + ',left=' + position.x + ',top=' + position.y)) {
                 location.href = url;
             }
         }
